@@ -24,11 +24,11 @@ public class Address {
         this.driver = driver;
     }
 
-    public boolean validateAddress () throws IOException {
-        ReadExcelData readExcelData = new ReadExcelData();
-        List<Map<String,Integer>> numaricValue = readExcelData.numaricData();
+    public boolean validateAddress (Object[] data) throws IOException {
+//        ReadExcelData readExcelData = new ReadExcelData();
+//        List<Map<String,Integer>> numaricValue = readExcelData.numaricData();
 
-       String homeNUmb = Integer.toString(numaricValue.get(0).get("MobNumb")) ;
+       String homeNUmb = String.valueOf(Math.round((Double)data[17])) ;
         element = driver.findElement(homePhone);
         if(element.getText().equals(homeNUmb)){
             return true;
@@ -43,6 +43,6 @@ public class Address {
     public void proceedToCheckoutButton() throws InterruptedException {
         element = driver.findElement(proceedToCheckout);
         element.click();
-        Thread.sleep(3000);
+        Thread.sleep(2000);
     }
 }

@@ -22,6 +22,7 @@ public class seleniumImplimentation {
     public void refresh(WebDriver driver){
         driver.navigate().refresh();
     }
+
     public boolean validateTest(WebDriver driver, WebElement element, String expectedText){
        String observedText = element.getText();
        if(observedText.equals(expectedText)){

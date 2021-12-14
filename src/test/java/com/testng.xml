@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true" name="/home/thunder/Desktop/Prac/abc/AutomateTestingOfSampleStoreWebsite">
+        <classes>
+            <class name="com.test.HomePageTest">
+                <methods>
+                    <include name="testClickOnDressesBtn"/>
+                    <include name="testAddToCartPrintedDresses"/>
+                    <include name="testClickOnTShitBtn"/>
+                    <include name="testAddToCartTShirt"/>
+                    <include name="testProceedToCheckoutBtn"/>
+                    <include name="testSummary"/>
+                    <include name="testEnterEmailInCreatAccount"/>
+                    <include name="testValidateAddress"/>
+                    <include name="testAdditionalInformation"/>
+                    <include name="testProceedToCheckoutButton"/>
+                    <include name="testSelectTermsOfService"/>
+                    <include name="testClickOnProceedTOCheckout"/>
+                    <include name="testPayment"/>
+                    <include name="testIConfirmMyOrder"/>
+                </methods>
+            </class>
+            <class name="com.test.sampleTEst">
+                <methods>
+                    <include name="testProvder"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
